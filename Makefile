@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/12 14:13:37 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/12 21:14:44 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ WHITE		:= \033[0;97m
 
 AR			:= @/bin/ar rcs
 CP			:= @/bin/cp
-ECHO		:= @echo
+ECHO		:= @echo -e
 MAKE		:= @make
 MKDIR		:= @/bin/mkdir
 RM			:= @/bin/rm -rf
