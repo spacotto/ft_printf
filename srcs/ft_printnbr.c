@@ -14,14 +14,14 @@
 
 void	ft_printnbr(t_format *sformat)
 {
-	int		i;
-	char	*s;
+	ssize_t	i;
 	size_t	len;
+	char	*s;
 
-	i = (int)va_arg(sformat->args, int);
-	s = ft_itoa(i);
+	i = (ssize_t)va_arg(sformat->args, int);
+	ft_itoa_base_buffer(i, "0123456789", sformat);
+	s = sformat->buffer;
 	ft_putstr_fd(s, 1);
 	len = ft_strlen(s);
-	free(s);
 	sformat->print_len += len;
 }

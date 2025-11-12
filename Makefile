@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/10 10:16:05 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/12 14:13:37 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ INC			:= -I ./inc/
 SRCS_DIR	:= srcs/
 
 SRCS		:= ft_printf.c ft_printchar.c ft_printstr.c ft_printptr.c ft_printnbr.c \
-				ft_printunb.c ft_printhex.c
+				ft_printunb.c ft_printhex.c itoa_base_buffer.c utoa_base_buffer.c
 
 # ============================================================================
 # OBJECTS

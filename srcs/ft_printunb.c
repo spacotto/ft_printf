@@ -15,13 +15,13 @@
 void	ft_printunb(t_format *sformat)
 {
 	size_t	u;
-	char	*s;
 	size_t	len;
-
+	char	*s;
+	
 	u = (size_t)va_arg(sformat->args, unsigned int);
-	s = ft_utoa_base(u, "0123456789");
+	ft_utoa_base_buffer(u, "0123456789", sformat);
+	s = sformat->buffer;
 	ft_putstr_fd(s, 1);
 	len = ft_strlen(s);
-	free(s);
 	sformat->print_len += len;
 }

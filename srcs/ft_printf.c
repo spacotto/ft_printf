@@ -14,6 +14,7 @@
 
 void	ft_typefield(const char **format, t_format *sformat)
 {
+	ft_bzero(sformat->buffer, 64);
 	if (**format == 'c')
 		ft_printchar(sformat);
 	else if (**format == 's')

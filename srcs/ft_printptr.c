@@ -15,11 +15,12 @@
 void	ft_printptr(t_format *sformat)
 {
 	size_t	p;
-	char	*s;
 	size_t	len;
-
+	char	*s;
+	
 	p = (size_t)va_arg(sformat->args, void *);
-	s = ft_utoa_base(p, "0123456789abcdef");
+	ft_utoa_base_buffer(p, "0123456789abcdef", sformat);
+	s = sformat->buffer;
 	if (p == 0)
 	{
 		ft_putstr_fd("(nil)", 1);
@@ -31,6 +32,5 @@ void	ft_printptr(t_format *sformat)
 		ft_putstr_fd(s, 1);
 		len = ft_strlen(s) + 2;
 	}
-	free(s);
 	sformat->print_len += len;
 }
