@@ -26,7 +26,7 @@ Returns the **number of characters printed**.
 To handle the variable number of arguments that `printf` accepts, C provides a set of macros defined in `<stdarg.h>`. These macros allow functions to access arguments when the number and types aren't known at compile time.
 
 ### va_list
-`va_list` is a **type** (technically a typedef) that holds the information needed to retrieve additional arguments with `va_arg`. 
+`va_list` holds the information needed to retrieve additional arguments with `va_arg`. 
 >[!WARNING]
 >`va_list` can be a macro or a type alias depending on your OS and compiler.
 
