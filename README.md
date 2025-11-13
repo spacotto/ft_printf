@@ -25,3 +25,27 @@ Returns the **number of characters printed**.
 1. Processes the format string **character by character**.
 2. When it finds a `%` specifier, it **extracts the next argument and formats it**.
 3. **Writes** the result **to standard output** (file descriptor `1`).
+
+## Variadic Type & Macros: `va_start`, `va_list`, `va_arg`, `va_end`
+To handle the variable number of arguments that `printf` accepts, C provides a set of macros defined in `<stdarg.h>`. These macros allow functions to access arguments when the number and types aren't known at compile time.
+
+### va_list
+`va_list` is a **type** (technically a typedef) that holds the information needed to retrieve additional arguments with `va_arg`. 
+>[!TIP]
+>Think of it as a pointer or iterator that keeps track of where you are in the argument list.
+
+### va_start
+`va_start` initialises a `va_list` variable to point to the first variadic argument. 
+It takes the `va_list` object and the last-named parameter before the ellipsis (`...`).
+
+### va_arg
+`va_arg` retrieves the next argument from the list. 
+It takes the `va_list` and the type of the argument to retrieve. 
+Each call advances the internal pointer to the next argument.
+
+>[!IMPORTANT]
+>You must know the correct type of each argument. Passing the wrong type leads to undefined behavior.
+
+### va_end
+`va_end` performs cleanup after you're done processing variadic arguments. 
+It must be called before the function returns.
