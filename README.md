@@ -1,10 +1,6 @@
 # ft_printf
 The `printf` function serves as a pedagogical tool for understanding **variadic functions in C**. As one of the most familiar functions to C programmers, it provides a concrete, practical example that students can immediately relate to while exploring advanced function concepts.
 
-### Table of Contents
-1. [`printf`: Definition](https://github.com/spacotto/ft_printf#printf-definition)
-2. [`printf`: Structure](https://github.com/spacotto/ft_printf#printf-behaviour)
-
 ## `printf`: Definition
 `printf` is a **variadic function** that formats and prints data to standard output. It's one of the most commonly used functions in C, thus making it a good way to learn about variadic functions.
 >[!NOTE]
