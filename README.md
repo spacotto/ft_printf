@@ -45,3 +45,24 @@ Each call advances the internal pointer to the next argument.
 ### va_end
 `va_end` performs cleanup after you're done processing variadic arguments. 
 It must be called before the function returns.
+
+## Format Specifiers
+Format specifiers tell `printf` how to interpret and display the variadic arguments. 
+Each specifier begins with a `%` character followed by a conversion character.
+
+### Supported Format Specifiers
+
+| Specifier | Description                                        | 
+|-----------|----------------------------------------------------|
+| `%c`      | Prints a single character                          |
+| `%s`      | Prints a null-terminated string                    |
+| `%p`      | Prints a pointer address in hexadecimal format     |
+| `%d`      | Prints a signed decimal integer (base 10)          |
+| `%i`      | Prints a signed integer in base 10                 |
+| `%u`      | Prints an unsigned decimal integer (base 10)       |
+| `%x`      | Prints a number in lowercase hexadecimal (base 16) | 
+| `%X`      | Prints a number in uppercase hexadecimal (base 16) | 
+| `%%`      | Prints a literal percent sign                      | 
+
+>[!NOTE]
+>**%d vs %i**: Both print signed integers in base 10. In `printf`, they behave identically, but they differ in `scanf` (where `%i` can parse octal and hexadecimal).
