@@ -27,7 +27,7 @@ To handle the variable number of arguments that `printf` accepts, C provides a s
 
 ### va_list
 `va_list` is a **type** (technically a typedef) that holds the information needed to retrieve additional arguments with `va_arg`. 
->[!TIP]
+>[!LOL]
 >Think of it as a pointer or iterator that keeps track of where you are in the argument list.
 
 ### va_start
