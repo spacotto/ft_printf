@@ -7,6 +7,8 @@ The `printf` function serves as a pedagogical tool for understanding **variadic 
 
 ## What is `printf`?
 `printf` is a **variadic function** that formats and prints data to standard output. It's one of the most commonly used functions in C, thus making it a good way to learn about variadic functions.
+>[NOTE]
+> A variadic function is a function that can accept a variable number of arguments, meaning its arity is not fixed.
 
 ## How does `printf` work?
 At its core, `printf`:
