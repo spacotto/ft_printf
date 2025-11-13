@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:57:46 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/12 16:27:37 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/13 11:42:48 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 // ============================================================================
 
 # include <stdarg.h>
+# include "../libft/inc/libft.h"
 
 // ============================================================================
 // STRUCTURES
@@ -45,7 +46,7 @@ void	ft_printunb(t_format *sformat);
 void	ft_printhex_lower(t_format *sformat);
 void	ft_printhex_upper(t_format *sformat);
 
-void    ft_itoa_base_buffer(ssize_t n, char* base, t_format *sformat);
+void	ft_itoa_base_buffer(ssize_t n, char *base, t_format *sformat);
 void	ft_utoa_base_buffer(size_t n, char *base, t_format *sformat);
 
 #endif

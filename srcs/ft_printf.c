@@ -6,15 +6,14 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:04:11 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/10 10:26:15 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/13 11:52:21 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "printf.h"
 
 void	ft_typefield(const char **format, t_format *sformat)
 {
-	ft_bzero(sformat->buffer, 64);
 	if (**format == 'c')
 		ft_printchar(sformat);
 	else if (**format == 's')
@@ -53,6 +52,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
+			ft_bzero(f.buffer, 64);
 			ft_typefield(&format, &f);
 		}
 		else
