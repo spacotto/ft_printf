@@ -28,7 +28,7 @@ To handle the variable number of arguments that `printf` accepts, C provides a s
 ### va_list
 `va_list` holds the information needed to retrieve additional arguments with `va_arg`. 
 >[!WARNING]
->`va_list` can be a macro or a type alias depending on your OS and compiler.
+>`va_list` can be a **macro** or a **type alias** depending on your OS and compiler.
 
 ### va_start
 `va_start` initialises a `va_list` variable to point to the first variadic argument. 
