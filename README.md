@@ -27,8 +27,8 @@ To handle the variable number of arguments that `printf` accepts, C provides a s
 
 ### va_list
 `va_list` is a **type** (technically a typedef) that holds the information needed to retrieve additional arguments with `va_arg`. 
->[!LOL]
->Think of it as a pointer or iterator that keeps track of where you are in the argument list.
+>[!WARNING]
+>`va_list` can be a macro or a type alias depending on your OS and compiler.
 
 ### va_start
 `va_start` initialises a `va_list` variable to point to the first variadic argument. 
