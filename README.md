@@ -11,17 +11,17 @@ The `printf` function serves as a pedagogical tool for understanding **variadic 
 > A variadic function is a function that can accept a variable number of arguments, meaning its arity is not fixed.
 
 ## `printf`: Structure
-# Prototype
+### Prototype
 > `int printf(const char *format, ...);`
 
-# Return Type
+### Return Type
 > Returns the **number of characters printed**.
 
-# Parameters
+### Parameters
 > 1. A `const char` (conventionally called `format`) describing what to print.
 > 2. A **variable number of additional arguments** based on that format string
 
-# Behavior
+### Behavior
 > 1. Processes the format string **character by character**.
 > 2. When it finds a `%` specifier, it **extracts the next argument and formats it**.
 > 3. **Writes** the result **to standard output** (file descriptor `1`).
