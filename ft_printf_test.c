@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/28 15:58:27 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/28 16:45:48 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	check(int c, int ft)
 {
 	printf("\n Return value: ");
 	ft = ft - 11; 					//Substract the value of the COLORS 7 + 4
-	printf(YELLOW "%d" RESET, ft);
+	printf(BOLD_YELLOW "%d" RESET, ft);
 	printf(" / ");
 	c = c - 11; 					//Substract the value of the COLORS 7 + 4
-	printf(CYAN "%d\n" RESET, c);
+	printf(BOLD_CYAN "%d\n" RESET, c);
 	total++;
 	if (c == ft)
 	{
@@ -174,7 +174,7 @@ int	main()
 	{
 		int i = 42;
 
-		int ft = ft_printf(YELLOW " %d" RESET, i);
+		int ft = ft_printf(YELLOW " %i" RESET, i);
 		printf("\n");
 		int c = printf(CYAN " %i" RESET, i);
 		printf("\n");
@@ -302,9 +302,9 @@ int	main()
 	puts(" PRINT %");
 	puts(" ----------------------------------------------------------------------------");
 	{
-		int ft = ft_printf(YELLOW "%%" RESET);
+		int ft = ft_printf(YELLOW " %%" RESET);
 		printf("\n");
-		int c = printf(CYAN "%%" RESET);
+		int c = printf(CYAN " %%" RESET);
 		printf("\n");
 
 		check(c, ft);
@@ -344,13 +344,13 @@ int	main()
 		check(c, ft);
 	}
 
-	puts(" TEST SUMMARY : ");
+	puts(" TEST SUMMARY");
 	puts(" ----------------------------------------------------------------------------");
 	{
 		if (passed == total)
-			printf(GREEN " %d / %d\n\n" RESET, passed, total);	
+			printf(CYAN " %d / %d\n\n" RESET, passed, total);	
 		else
-			printf(RED " %d / %d\n\n" RESET, passed, total);	
+			printf(MAGENTA " %d / %d\n\n" RESET, passed, total);	
 	}
 
 	return (0);
